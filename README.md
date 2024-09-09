@@ -1,28 +1,75 @@
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fvercel%2Fexamples%2Ftree%2Fmain%2Fpython%2Fflask3&demo-title=Flask%203%20%2B%20Vercel&demo-description=Use%20Flask%203%20on%20Vercel%20with%20Serverless%20Functions%20using%20the%20Python%20Runtime.&demo-url=https%3A%2F%2Fflask3-python-template.vercel.app%2F&demo-image=https://assets.vercel.com/image/upload/v1669994156/random/flask.png)
+# Stock Price Predictor 📈
 
-# Flask + Vercel
+A web application that predicts future stock prices based on historical data using machine learning. Built using Flask, scikit-learn, and yfinance.
 
-This example shows how to use Flask 3 on Vercel with Serverless Functions using the [Python Runtime](https://vercel.com/docs/concepts/functions/serverless-functions/runtimes/python).
+## Features
+- 📅 **Date-based Prediction**: Users can input a specific date to get stock price predictions for that date.
+- 📊 **Stock Ticker Selection**: Input any stock ticker from Yahoo Finance (e.g., `AAPL`, `GOOGL`) to retrieve predictions.
+- ⚙️ **Machine Learning Model**: The app uses a linear regression model trained on historical stock data.
+- 🖥️ **Interactive UI**: A user-friendly web interface built with Flask for easy input and results display.
 
-## Demo
+## Installation
 
-https://flask-python-template.vercel.app/
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/your-username/stock-predictor.git
+   cd stock-predictor
+   ```
 
-## How it Works
+2. **Create a virtual environment** (optional but recommended):
+   ```bash
+   python -m venv venv
+   source venv/bin/activate  # On Windows: venv\Scripts\activate
+   ```
 
-This example uses the Web Server Gateway Interface (WSGI) with Flask to enable handling requests on Vercel with Serverless Functions.
+3. **Install dependencies**:
+   ```bash
+   pip install -r requirements.txt
+   ```
 
-## Running Locally
+4. **Run the Flask application**:
+   ```bash
+   python app.py
+   ```
 
-```bash
-npm i -g vercel
-vercel dev
+5. Open your browser and navigate to `http://127.0.0.1:5000/`.
+
+## Usage
+
+1. Enter the **stock ticker** (e.g., `AAPL` for Apple, `GOOGL` for Alphabet) in the input field.
+2. Enter the **date** (in YYYY-MM-DD format) for which you want the stock price prediction.
+3. Click **Predict** to get the estimated stock price for that date.
+
+## Project Structure
+
+```
+stock_predictor/
+├── app.py              # Flask application
+├── model.py            # Stock prediction model
+├── templates/
+│   └── index.html      # HTML template for UI
+├── static/             # Static files (CSS, JS, etc.)
+├── requirements.txt    # Dependencies
+└── README.md           # Project documentation
 ```
 
-Your Flask application is now available at `http://localhost:3000`.
+## Technologies Used
 
-## One-Click Deploy
+- **Flask**: For building the web interface.
+- **scikit-learn**: For the machine learning model (Linear Regression).
+- **yfinance**: For fetching historical stock data.
+- **pandas**: For data manipulation.
 
-Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=vercel-examples):
+## Future Enhancements
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fvercel%2Fexamples%2Ftree%2Fmain%2Fpython%2Fflask3&demo-title=Flask%203%20%2B%20Vercel&demo-description=Use%20Flask%203%20on%20Vercel%20with%20Serverless%20Functions%20using%20the%20Python%20Runtime.&demo-url=https%3A%2F%2Fflask3-python-template.vercel.app%2F&demo-image=https://assets.vercel.com/image/upload/v1669994156/random/flask.png)
+- 🔄 **Additional Machine Learning Models**: Adding support for more complex models like Decision Trees or LSTM.
+- 📱 **Mobile-friendly UI**: Improving the design to be more responsive on mobile devices.
+- ⏲️ **Live Data Update**: Use real-time stock data for prediction rather than relying solely on historical data.
+
+## Contributing
+
+Feel free to submit issues or pull requests if you'd like to improve the project!
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
