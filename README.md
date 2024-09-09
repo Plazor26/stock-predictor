@@ -1,42 +1,52 @@
-# Stock Price Predictor 📈
+# Stock Price Predictor
 
-A web application that predicts future stock prices based on historical data using machine learning. Built using Flask, scikit-learn, and yfinance.
+This is a Flask-based web application that predicts stock prices based on historical data. The application features a custom "Dark Miku" aesthetic, which combines a dark, futuristic style with Hatsune Miku's iconic teal color scheme.
 
 ## Features
-- 📅 **Date-based Prediction**: Users can input a specific date to get stock price predictions for that date.
-- 📊 **Stock Ticker Selection**: Input any stock ticker from Yahoo Finance (e.g., `AAPL`, `GOOGL`) to retrieve predictions.
-- ⚙️ **Machine Learning Model**: The app uses a linear regression model trained on historical stock data.
-- 🖥️ **Interactive UI**: A user-friendly web interface built with Flask for easy input and results display.
 
+- **Stock Price Prediction**: Predicts the closing price of a stock for a given date using linear regression based on historical data.
+- **Custom Aesthetic**: Styled with a unique "Dark Miku" theme, blending dark tones with teal accents for a modern, futuristic look.
+- **Error Handling**: Provides user-friendly error messages for invalid ticker symbols or date formats.
+
+## Tech Stack
+
+- **Backend**: Flask
+- **Frontend**: HTML, CSS (custom styling)
+- **Data**: `yfinance` library for fetching stock data
+- **Machine Learning**: Linear Regression from `scikit-learn`
+  
 ## Installation
 
-1. **Clone the repository**:
-   ```bash
-   git clone https://github.com/your-username/stock-predictor.git
-   cd stock-predictor
-   ```
+### Prerequisites
 
-2. **Create a virtual environment** (optional but recommended):
-   ```bash
-   python -m venv venv
-   source venv/bin/activate  # On Windows: venv\Scripts\activate
-   ```
+Make sure you have Python 3.7+ installed on your machine.
 
-3. **Install dependencies**:
-   ```bash
-   pip install -r requirements.txt
-   ```
+1. Clone the repository:
+    ```bash
+    git clone https://github.com/your-username/dark-miku-stock-predictor.git
+    cd dark-miku-stock-predictor
+    ```
 
-4. **Run the Flask application**:
-   ```bash
-   python app.py
-   ```
+2. Create and activate a virtual environment (optional but recommended):
+    ```bash
+    python -m venv venv
+    source venv/bin/activate  # On Windows use `venv\Scripts\activate`
+    ```
 
-5. Open your browser and navigate to `http://127.0.0.1:5000/`.
+3. Install the required packages:
+    ```bash
+    pip install -r requirements.txt
+    ```
 
-## Usage
+### Requirements
 
-1. Enter the **stock ticker** (e.g., `AAPL` for Apple, `GOOGL` for Alphabet) in the input field.
+Your `requirements.txt` file should include the following:
+```plaintext
+Flask
+yfinance
+pandas
+scikit-learn
+** (e.g., `AAPL` for Apple, `GOOGL` for Alphabet) in the input field.
 2. Enter the **date** (in YYYY-MM-DD format) for which you want the stock price prediction.
 3. Click **Predict** to get the estimated stock price for that date.
 
